@@ -1,13 +1,13 @@
 const apiurl = "https://mp3quran.net/api/v3";
 const endPoint = 'reciters';
-const language = 'ar';
+const language = 'en';
 
 
 async function getReciters() {
     const chooseReciter = document.querySelector("#chooseReciter")
     const res = await fetch(`${apiurl}/reciters?language=${language}`)
     const data = await res.json()
-    // console.log(data)
+    console.log(data.reciters)
     chooseReciter.innerHTML = `<Option value = "">اختر القارئ</Option> `
     data.reciters.forEach(reciter => chooseReciter.innerHTML += `<Option value = "${reciter.id}">${reciter.name}</Option> `);
     chooseReciter.addEventListener('change', e => getMoshaf(e.target.value))
