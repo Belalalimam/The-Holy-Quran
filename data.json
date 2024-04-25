@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "pepsi",
+        "company": "PepsiCo",
+        "product": "drink",
+        "img": "https://kiosclub.com/9554/pack-de-pepsi-original.jpg"
+    },
+    {
+        "id": 1,
+        "product-name": "pepsi",
+        "company-name": "PepsiCo",
+        "the product": "drink",
+        "img": "https://kiosclub.com/9554/pack-de-pepsi-original.jpg"
+    }
+
+]
