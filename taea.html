@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <div id=" page-wrap ">
+
+        <input type=" text"id=" skey "/>
+        <button onclick="check_hadith()"> Search</button>
+
+            <div id="dorar">
+
+            </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script script type="text/javascript">
+
+        function check_hadith() {
+
+            $.getJSON("https://dorar.net/dorar_api.json?skey=" + $("#skey").attr("value")
+                + "&callback=?", function (data) {
+
+                    $("#dorar").html("");
+                    $.each(data.ahadith, function (index, item) {
+                        $("#dorar").append("<span class='result' >" + item.th + "</span>");
+                    });
+                });
+
+
+        }
+    </script>
+</body>
+
+</html>
